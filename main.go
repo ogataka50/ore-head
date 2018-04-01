@@ -15,6 +15,7 @@ func main() {
 	fmt.Println("n : ", *optNum)
 	fmt.Println("files:", flag.Args())
 
+	// execute
 	for _, v := range flag.Args() {
 		file, err := os.Open(v)
 		if err != nil {
@@ -32,5 +33,6 @@ func main() {
 			}
 			fmt.Printf("%s\n", sc.Text())
 		}
+		fmt.Print("\n")
 	}
 }
